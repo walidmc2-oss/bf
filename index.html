@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhaktifield</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/scripts/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="title-container">
+        <div class="variable">
+          <span class="Bhakti">Bhakti</span>
+          <span class="Field">Field</span>
+        </div>
+        <img
+          class="logo scale-in"
+          src="/Images/68046419_1662972779215810_r-1380173590.png"
+          alt="Bhakti Field Logo"
+        />
+      </div>
+
+      <nav class="dropdown-menu">
+        <div class="menu-container">
+          <ul class="menu">
+            <li><a href="/index.html">Home</a></li>
+            <li class="has-dropdown">
+              <a href="/pages/TheBF.html">Bhakti Field</a>
+              <ul class="submenu">
+                <li><a href="/pages/WhatIsBY.html">What is Bhakti Yoga?</a></li>
+                <li><a href="/pages/DM.html">The Divine Master</a></li>
+                <li><a href="/pages/TheBF.html">The Bhakti Field</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="/pages/Charity.html">Our Mission</a>
+              <ul class="submenu">
+                <li><a href="/pages/Charity.html">Charity</a></li>
+                <li>
+                  <a
+                    href="https://scgmission.net/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >SCG Mission</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="/pages/VV.html">Vedic Vegetarian</a></li>
+
+            <li class="has-dropdown">
+              <a href="/pages/Zoom.html">Join the movement </a>
+              <ul class="submenu">
+                <li><a href="/pages/Zoom.html">Zoom Classes</a></li>
+
+                <li><a href="/pages/IndiaPil.html">India Pilgrimages</a></li>
+                <li><a href="/pages/Harinam.html">Harinam & Festivals</a></li>
+                <li><a href="/pages/LoveFeast.html">Love Feast</a></li>
+              </ul>
+            </li>
+            <li><a href="/pages/Contact.html">Contact</a></li>
+            <li><a href="/pages/Donate.html">Donate</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="slideshow-container">
+        <div class="slide fade">
+          <img
+            src="https://www.wallpaperflare.com/static/335/587/630/blooming-lotus-flower-selective-focus-photography-wallpaper.jpg"
+            alt="Bhakti Field Image 1"
+          />
+        </div>
+        <div class="slide fade">
+          <img
+            src="https://symbolsandmeanings.net/wp-content/uploads/2021/06/Pink-Lotus-Flower-Meaning-And-Symbolism-scaled.jpg"
+            alt="Bhakti Field Image 2"
+          />
+        </div>
+        <div class="slide fade">
+          <img
+            src="https://images.freeimages.com/images/large-previews/2ba/lotus-flower-1382263.jpg"
+            alt="Bhakti Field Image 3"
+          />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </main>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+      // Auto-advance slides every 5 seconds
+      setInterval(() => {
+        plusSlides(1);
+      }, 5000);
+    </script>
+    <script>
+      const bhaktiSpan = document.querySelector(".Bhakti");
+      const fieldSpan = document.querySelector(".Field");
+
+      bhaktiSpan.addEventListener("animationend", () => {
+        bhaktiSpan.classList.remove("stretch");
+        bhaktiSpan.style.fontVariationSettings = '"wght" 900, "wdth" 200';
+      });
+
+      fieldSpan.addEventListener("animationend", () => {
+        fieldSpan.classList.remove("stretch-reverse");
+        fieldSpan.style.fontVariationSettings = '"wght" 275, "wdth" 50';
+      });
+    </script>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Bhakti Field</h3>
+          <ul class="footer-links">
+            <li><a href="/pages/WhatIsBY.html">What is Bhakti Yoga?</a></li>
+            <li><a href="/pages/Charity.html">Our Mission</a></li>
+            <li><a href="/pages/VV.html">Vedic Vegetarian</a></li>
+            <li><a href="/pages/DM.html">The Divine Master</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Join Us</h3>
+          <ul class="footer-links">
+            <li><a href="/pages/Zoom.html">Zoom Classes</a></li>
+            <li><a href="/pages/LoveFeast.html">Weekly Events</a></li>
+            <li><a href="/pages/IndiaPil.html">India Pilgrimages</a></li>
+            <li><a href="/pages/Harinam.html">Harinam & Festivals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul class="footer-links">
+            <li><a href="/pages/Contact.html">Contact</a></li>
+            <li><a href="/pages/Donate.html">Donate</a></li>
+            <li><a href="/pages/VV.html">Volunteer</a></li>
+            <li>
+              <a
+                href="https://www.instagram.com/vedicvegetarian108/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Vedic Vegetarian Instagram</a
+              >
+            </li>
+          </ul>
+
+          <div class="social-links">
+            <a href="#" class="social-icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 The Bhakti Field Inc. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Add Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </body>
+</html>

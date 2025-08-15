@@ -1,0 +1,14 @@
+/* dm-styles.css */
+
+/* Gør alle sektioner stabile ved at justere dem til toppen */
+.content-container {
+  align-items: flex-start;
+}
+
+/* Ny klasse til at bytte om på rækkefølgen visuelt.
+    Dette får browseren til at rendre billedet til venstre,
+    selvom teksten kommer først i HTML-koden, hvilket løser "hoppe"-fejlen.
+  */
+.image-on-left {
+  flex-direction: row-reverse;
+}
